@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "12"
+version = "0.1.0"
+description = ""
+authors = ["hppRC <hpp.ricecake@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+hydra-core = "^1.1.0"
+matplotlib = "^3.4.2"
+pytest = "^6.2.4"
+hydra-colorlog = "^1.1.0"
+hydra-optuna-sweeper = "^1.1.0"
+hydra-joblib-launcher = "^1.1.5"
+
+[tool.poetry.dev-dependencies]
+pysen = {version = "^0.9.1", extras = ["lint"]}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pysen]
+version = "0.9"
+
+[tool.pysen.lint]
+enable_black = true
+enable_flake8 = true
+enable_isort = true
+enable_mypy = false
+mypy_preset = "strict"
+py_version = "py37"
+[[tool.pysen.lint.mypy_targets]]
+paths = ["."]
